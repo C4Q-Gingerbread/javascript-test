@@ -7,20 +7,17 @@ exports = typeof window === 'undefined' ? global : window;
  * populated at all; your job is to fill them out.
  */
 
+
 exports.bestPracticesAnswers = {
   globals: function() {
-    myObject = {
-      name: 'Jory'
-    };
-
-    return myObject;
   },
 
   parseInt: function(num) {
-    return parseInt(num);
+    if(num.slice(0,2) === "0x") return 0
+    return parseInt(num)
   },
 
   identity: function(val1, val2) {
-
+    return val1 === val2;
   }
 };
