@@ -10,6 +10,13 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
-
+  
+    switch (true) {
+      case isNaN(num): return false;
+      case num % 3 === 0 && num % 5 === 0: return "fizzbuzz"
+      case num % 3 === 0: return "fizz"
+      case num % 5 === 0: return "buzz"
+      default: return num
+    }
   }
 };
